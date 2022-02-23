@@ -1,0 +1,9 @@
+
+@mixin for-width($size) {
+	@media(min-width: map-get($site-breakpoints,$size)) { @content; }	
+}
+
+
+@mixin for-width-down($size) {
+	@media(max-width: map-get($site-breakpoints,$size)) { @content; }	
+}

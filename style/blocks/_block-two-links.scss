@@ -1,0 +1,53 @@
+$block-name: 'b-block-two-links';
+
+.#{$block-name} {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/images/site/bg.jpg');
+    background-size: cover;
+    padding: 80px 0;
+
+    &__title {
+        margin-bottom: 55px;
+        font-size: 36px;
+        line-height: 46px;
+        color: $color-white;
+        font-weight: 700;
+        max-width: 470px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__link-wrapper {
+        text-align: center;
+        margin: 0 45px;
+
+        &:first-child {
+            margin-bottom: 70px;
+
+            @include for-width('mobile2') {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__link-img {
+        margin-bottom: 26px;
+    }
+
+    &__link {
+        min-width: 255px;
+    }
+ }

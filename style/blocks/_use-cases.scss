@@ -1,0 +1,60 @@
+$block-name: 'b-use-cases';
+
+.#{$block-name} {
+    &__title {
+        font-size: 36px;
+        line-height: 43px;
+        margin-bottom: 70px;
+        font-weight: 700;
+        color: $color-dark-blue;
+        text-transform: uppercase;
+    }
+
+    &__items {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-right: -30px;
+
+        @include for-width('mobile2') {
+            margin-right: -100px;
+        }
+
+        @include for-width('middle') {
+            &.space-between {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__item {
+        margin-right: 30px;
+        max-width: 280px;
+        width: calc(100% - 30px);
+        margin-bottom: 60px;
+
+        @include for-width('mobile2') {
+            margin-right: 100px;
+        }
+    }
+
+    &__item-title {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    &__item-desc {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 18px;
+    }
+
+    &__item-link {
+        color: $color-orange;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+}

@@ -1,0 +1,31 @@
+$block-name: 'b-protect-list';
+
+.#{$block-name} {
+    &__title {
+        margin-bottom: 26px;
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+    }
+
+    &__list-item {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 40px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -5px;
+            height: 30px;
+            width: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('/images/site/protect-icon.svg');
+        }
+    }
+}
